@@ -1,0 +1,13 @@
+<!-- store/templates/store/add_category.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h2>Add Category</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary">Add Category</button>
+    </form>
+  </div>
+{% endblock %}
